@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+AUTH_USER_MODEL='accounts.USER'
 # Application definition
 
 INSTALLED_APPS = [
@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #my apps 
+    'accounts.apps.AccountsConfig',
+    'problems.apps.ProblemsConfig',
+    
 ]
 
 MIDDLEWARE = [
