@@ -1,0 +1,13 @@
+user : ati@gmail.com
+pass :stack123
+
+
+
+    
+class Category(models.Model):
+    parent = models.ForeignKey('self',on_delete=models.CASCADE)
+    title = models.CharField(max_length=50,verbose_name="عنوان")
+    
+    def __str__(self):
+        return self.title
+        

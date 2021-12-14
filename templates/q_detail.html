@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+      <div class="card">
+         <h2> {{object.q_head}}</h2>
+         <p>{{object.body|safe}}</p>
+            {% for img in images %}
+            <img src="{{ img.image.url }}" width='300' height = "300" > 
+            {% empty %}
+             <p> no pic</p>
+            {% endfor %}
+
+      </div>
+    </div>
+</div>
+{% endblock content %}

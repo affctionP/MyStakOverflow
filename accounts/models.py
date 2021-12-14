@@ -5,7 +5,7 @@ from .manager import CustomUserManager
 # Create your models here.
 
 class USER (AbstractUser):
-    name=models.CharField(max_length=30,default="کاربر")
+    name=models.CharField(max_length=30,default="کاربر" , null=True)
     
     username=None
     email =models.EmailField(unique=True)

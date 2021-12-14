@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    
+    
+   
+    {{questionform.as_p}}
+
+    <div class="fallback" id ="input-pic" url = "{% url 'problems:add-q'%}">
+        <input name="file" type="file"  multiple />
+    </div>
+    <input type="submit" value= "add"/>
+</form>
+{% endblock content %}
